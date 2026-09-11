@@ -19,6 +19,10 @@
  */
 
 @theme inline {
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Manrope", sans-serif;
+  --color-aurora: var(--aurora);
+  --color-frost: var(--frost);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
