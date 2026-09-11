@@ -202,19 +202,19 @@ function Index() {
             <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
               Summit — a logistics platform moving 40,000 shipments a day.
             </h2>
-            <p className="mt-5 text-sm leading-relaxed text-frost/70">
+            <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
               We rebuilt a fifteen-year-old operations suite into a single real-time
               platform. Dispatch time fell by 38%, and the team onboards new depots in an
               afternoon instead of a quarter.
             </p>
             <div className="mt-8 flex gap-10">
               <div>
-                <p className="font-display text-3xl text-frost">38%</p>
-                <p className="text-xs tracking-wider text-frost/60 uppercase">Faster dispatch</p>
+                <p className="font-display text-3xl text-foreground">38%</p>
+                <p className="text-xs tracking-wider text-foreground/60 uppercase">Faster dispatch</p>
               </div>
               <div>
-                <p className="font-display text-3xl text-frost">99.98%</p>
-                <p className="text-xs tracking-wider text-frost/60 uppercase">Uptime</p>
+                <p className="font-display text-3xl text-foreground">99.98%</p>
+                <p className="text-xs tracking-wider text-foreground/60 uppercase">Uptime</p>
               </div>
             </div>
           </div>
@@ -239,13 +239,13 @@ function Index() {
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/55 to-foreground/65" />
         <div className="relative mx-auto max-w-3xl px-5 py-32 text-center sm:px-8">
           <p className="eyebrow">Start here</p>
-          <h2 className="mt-5 text-4xl sm:text-6xl">
+          <h2 className="mt-5 text-4xl text-frost sm:text-6xl">
             Tell us what you're <span className="text-aurora">building.</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-frost/75">
+          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-frost/80">
             Send a short brief and we'll reply within two working days with a first read on
             scope, timeline and team.
           </p>
@@ -258,11 +258,11 @@ function Index() {
               required
               placeholder="you@company.com"
               aria-label="Email address"
-              className="flex-1 rounded-full bg-transparent px-5 py-3 text-sm text-frost placeholder:text-frost/45 focus:outline-none"
+              className="flex-1 rounded-full bg-transparent px-5 py-3 text-sm text-foreground placeholder:text-foreground/45 focus:outline-none"
             />
             <button
               type="submit"
-              className="rounded-full bg-frost px-6 py-3 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
+              className="rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
             >
               Get in touch
             </button>
@@ -273,7 +273,7 @@ function Index() {
       <footer className="mx-auto max-w-6xl px-5 pb-12 sm:px-8">
         <div className="hairline mb-8" />
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-muted-foreground sm:flex-row">
-          <span className="font-display text-base tracking-[0.4em] text-frost">AKINA</span>
+          <span className="font-display text-base tracking-[0.4em] text-foreground">AKINA</span>
           <p>© {new Date().getFullYear()} Akina Studio. Software engineering.</p>
         </div>
       </footer>
