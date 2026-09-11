@@ -62,25 +62,25 @@ function Index() {
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/30 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/20 to-foreground/55" />
 
         <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col px-5 py-6 sm:px-8">
           <nav className="glass flex items-center justify-between rounded-full px-5 py-3">
-            <span className="font-display text-lg tracking-[0.4em] text-frost">AKINA</span>
-            <div className="hidden items-center gap-9 text-sm text-frost/80 md:flex">
-              <a href="#services" className="transition-colors hover:text-frost">
+            <span className="font-display text-lg tracking-[0.4em] text-foreground">AKINA</span>
+            <div className="hidden items-center gap-9 text-sm text-foreground/75 md:flex">
+              <a href="#services" className="transition-colors hover:text-foreground">
                 Services
               </a>
-              <a href="#studio" className="transition-colors hover:text-frost">
+              <a href="#studio" className="transition-colors hover:text-foreground">
                 Studio
               </a>
-              <a href="#work" className="transition-colors hover:text-frost">
+              <a href="#work" className="transition-colors hover:text-foreground">
                 Work
               </a>
             </div>
             <a
               href="#contact"
-              className="glass-soft rounded-full px-4 py-2 text-xs tracking-widest text-frost uppercase transition-colors hover:bg-primary/25"
+              className="glass-soft rounded-full px-4 py-2 text-xs tracking-widest text-foreground uppercase transition-colors hover:bg-primary/10"
             >
               Contact
             </a>
@@ -88,25 +88,25 @@ function Index() {
 
           <div className="flex flex-1 flex-col items-center justify-center py-20 text-center">
             <p className="eyebrow rise">Software Agency · Est. 2016</p>
-            <h1 className="rise mt-6 max-w-4xl text-5xl leading-[1.05] sm:text-7xl md:text-8xl">
+            <h1 className="rise mt-6 max-w-4xl text-5xl leading-[1.05] text-frost sm:text-7xl md:text-8xl">
               <span className="text-aurora">Software built</span>
               <br />
               with altitude.
             </h1>
-            <p className="rise mt-7 max-w-xl text-base leading-relaxed text-frost/75">
+            <p className="rise mt-7 max-w-xl text-base leading-relaxed text-frost/80">
               We design and engineer digital products for companies that treat software as
               craft — from first architecture sketch to the release that carries your revenue.
             </p>
             <div className="rise mt-10 flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#contact"
-                className="rounded-full bg-frost px-7 py-3 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
+                className="rounded-full bg-frost px-7 py-3 text-sm font-medium text-foreground transition-transform hover:-translate-y-0.5"
               >
                 Start a project
               </a>
               <a
                 href="#services"
-                className="glass rounded-full px-7 py-3 text-sm text-frost transition-transform hover:-translate-y-0.5"
+                className="glass rounded-full px-7 py-3 text-sm text-foreground transition-transform hover:-translate-y-0.5"
               >
                 View services
               </a>
@@ -121,8 +121,8 @@ function Index() {
               ["4 wks", "To first release"],
             ].map(([k, v]) => (
               <div key={v} className="px-6 py-6 text-center">
-                <p className="font-display text-3xl text-frost">{k}</p>
-                <p className="mt-1 text-xs tracking-wider text-frost/60 uppercase">{v}</p>
+                <p className="font-display text-3xl text-foreground">{k}</p>
+                <p className="mt-1 text-xs tracking-wider text-foreground/60 uppercase">{v}</p>
               </div>
             ))}
           </div>
@@ -184,7 +184,7 @@ function Index() {
               {["React", "TypeScript", "Node", "Postgres", "AWS", "Swift"].map((t) => (
                 <span
                   key={t}
-                  className="glass-soft rounded-full px-4 py-1.5 text-xs tracking-wide text-frost/80"
+                  className="glass-soft rounded-full px-4 py-1.5 text-xs tracking-wide text-foreground/75"
                 >
                   {t}
                 </span>
