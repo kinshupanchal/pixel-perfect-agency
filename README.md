@@ -1,14 +1,16 @@
-# Welcome to your Lovable project
+# Pixel Perfect Agency
+
+use this theme and exact theme and help me create a landing page for my Agency which offer's software servies  i want to use react framework for this so explain me how we are gonna built it from scratch and u have to build the whole website and explain me the codelisten the website is great but i want you to add high resolution image of something that will go with the theme and concept and make the website look expensive and neat and classy
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/68bf5560-2b01-4e3a-9f1d-767b2f7e5d93).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
