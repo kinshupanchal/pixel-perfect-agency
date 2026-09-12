@@ -67,21 +67,21 @@
 
 :root {
   --radius: 1.25rem;
-  --background: oklch(0.985 0.006 300);
-  --foreground: oklch(0.26 0.05 292);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.26 0.05 292);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.26 0.05 292);
-  --primary: oklch(0.52 0.16 305);
-  --primary-foreground: oklch(0.985 0.006 300);
-  --secondary: oklch(0.94 0.02 300);
-  --secondary-foreground: oklch(0.26 0.05 292);
-  --muted: oklch(0.955 0.012 300);
-  --muted-foreground: oklch(0.48 0.04 296);
+  --background: oklch(0.958 0.024 302);
+  --foreground: oklch(0.25 0.055 292);
+  --card: oklch(0.995 0.008 302);
+  --card-foreground: oklch(0.25 0.055 292);
+  --popover: oklch(0.995 0.008 302);
+  --popover-foreground: oklch(0.25 0.055 292);
+  --primary: oklch(0.5 0.17 305);
+  --primary-foreground: oklch(0.99 0.006 300);
+  --secondary: oklch(0.915 0.038 300);
+  --secondary-foreground: oklch(0.25 0.055 292);
+  --muted: oklch(0.935 0.03 300);
+  --muted-foreground: oklch(0.46 0.05 296);
   --accent: oklch(0.6 0.14 20);
-  --accent-foreground: oklch(0.985 0.006 300);
-  --aurora: oklch(0.62 0.16 315);
+  --accent-foreground: oklch(0.99 0.006 300);
+  --aurora: oklch(0.6 0.17 315);
   --frost: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
@@ -159,12 +159,24 @@
   body {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(70rem 40rem at 8% -8%, color-mix(in oklab, var(--aurora) 20%, transparent), transparent 60%),
+      radial-gradient(60rem 38rem at 105% 18%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 62%),
+      linear-gradient(180deg, var(--frost), color-mix(in oklab, var(--background) 85%, var(--frost)));
+    background-attachment: fixed;
   }
   h1, h2, h3, .font-display {
     font-family: var(--font-display);
     font-weight: 300;
     letter-spacing: -0.01em;
   }
+}
+
+@utility panel {
+  background: color-mix(in oklab, var(--frost) 78%, transparent);
+  border: 1px solid color-mix(in oklab, var(--primary) 14%, transparent);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-glass);
 }
 
 @utility glass {
