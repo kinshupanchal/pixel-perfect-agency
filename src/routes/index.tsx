@@ -227,6 +227,8 @@ function Index() {
             className="h-full min-h-[300px] w-full object-cover"
           />
         </div>
+
+        <PreviousWork />
       </section>
 
       {/* Contact */}
