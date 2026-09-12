@@ -1,8 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
 import heroImg from "@/assets/hero-mountains.jpg";
 import studioImg from "@/assets/studio.jpg";
 import climberImg from "@/assets/climber.jpg";
 import valleyImg from "@/assets/valley.jpg";
+import { worksQuery } from "@/lib/works";
+
+function PreviousWork() {
+  const { data: works } = useQuery(worksQuery);
+  if (!works || works.length === 0) return null;
+
+  return (
+    <div className="mt-16">
+      <p className="eyebrow">Previous work</p>
+      <h3 className="mt-4 text-3xl sm:text-4xl">Projects we've delivered.</h3>
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {works.map((w) => (
+          <article key={w.id} className="panel overflow-hidden rounded-3xl">
+            {w.image_url ? (
+              <img
+                src={w.image_url}
+                alt={w.title}
+                loading="lazy"
+                className="h-48 w-full object-cover"
+              />
+            ) : null}
+            <div className="p-6">
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-xs tracking-widest text-primary uppercase">
+                  {w.client ?? "Project"}
+                </span>
+                {w.year ? (
+                  <span className="text-xs text-muted-foreground">{w.year}</span>
+                ) : null}
+              </div>
+              <h4 className="mt-3 text-2xl">{w.title}</h4>
+              {w.summary ? (
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.summary}</p>
+              ) : null}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -227,6 +269,8 @@ function Index() {
             className="h-full min-h-[300px] w-full object-cover"
           />
         </div>
+
+        <PreviousWork />
       </section>
 
       {/* Contact */}
